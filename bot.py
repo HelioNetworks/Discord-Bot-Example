@@ -23,7 +23,7 @@ bot = commands.Bot(command_prefix='>')
 
 @bot.event
 async def on_ready():
-    await bot.change_presence(status=discord.Status.dnd, activity=discord.Game('powered by HelioHost'))
+    await bot.change_presence(status=discord.Status.online, activity=discord.Game('powered by HelioHost'))
 
 
 @bot.command()
@@ -47,6 +47,7 @@ async def status(ctx, arg):
         await bot.change_presence(status=discord.Status.do_not_disturb)
     else:
         await ctx.send('Argument not recognized: ' + arg)
+        return
     await ctx.send('Changing status to {}.'.format(arg))
 
 
