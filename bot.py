@@ -1,4 +1,4 @@
-#!/usr/bin/python3.7
+#!/usr/bin/python3.12
 
 # Packages used:
 # https://github.com/theskumar/python-dotenv
@@ -18,7 +18,9 @@ logging.basicConfig(level=logging.INFO)
 load_dotenv()
 token = os.getenv('DISCORD_TOKEN')
 
-bot = commands.Bot(command_prefix='>')
+intents = discord.Intents.default()
+intents.message_content = True
+bot = commands.Bot(command_prefix='>', intents=intents)
 
 
 @bot.event
