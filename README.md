@@ -2,7 +2,7 @@
 
 ### Example project using Discord.py
 
-Tutorial available here: https://youtu.be/6dww3CNK15o
+Tutorial available here: https://youtu.be/-9Q9SAONgtM
 
 ### Packages used:
 
